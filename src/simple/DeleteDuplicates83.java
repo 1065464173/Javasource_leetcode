@@ -1,6 +1,5 @@
 package simple;
 
-import org.junit.jupiter.api.Test;
 import struct.ListNode;
 
 /**
@@ -11,7 +10,7 @@ import struct.ListNode;
  * @create: 2021-07-04 21:21
  */
 public class DeleteDuplicates83 {
-  @Test
+
   public void test() {
     ListNode l4 = new ListNode(3);
     ListNode l3 = new ListNode(3, l4);

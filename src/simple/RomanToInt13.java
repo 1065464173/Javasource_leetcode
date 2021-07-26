@@ -1,7 +1,5 @@
 package simple;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +23,6 @@ public class RomanToInt13 {
         }
       };
 
-  @Test
   public void test01() {
     System.out.println(romanToInt("XXII"));
   }

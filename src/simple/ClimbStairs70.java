@@ -1,7 +1,5 @@
 package simple;
 
-import org.junit.jupiter.api.Test;
-
 /**
  * @program: Javasource_leetcode
  * @description: 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。
@@ -10,15 +8,6 @@ import org.junit.jupiter.api.Test;
  * @create: 2021-07-02 14:45
  */
 public class ClimbStairs70 {
-  @Test
-  public void test() {
-    long start = System.currentTimeMillis();
-    //    System.out.println(climbStairs1(10000));
-    //    System.out.println(climbStairs2(1000000000));
-    System.out.println(climbStairs3(1000000000));
-    long end = System.currentTimeMillis();
-    System.out.println(end - start);
-  }
 
   /**
    * 斐波那契数列：fn = f(n-1)+f(n-2) 使用斐波那契数列的通项公式即可 时间复杂度取决于Math内部算法，double转int会缺少部分精度

@@ -1,7 +1,5 @@
 package simple;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 
 /**
@@ -12,17 +10,6 @@ import java.util.Arrays;
  * @create: 2021-07-05 11:30
  */
 public class Merge88 {
-  @Test
-  public void test() {
-    int[] num1 = new int[] {1, 2, 3, 0, 0, 0, 0};
-    int[] num2 = new int[] {2, 4, 5, 6};
-
-    //    merge1(num1, 3, num2, num2.length);
-    //    merge2(num1, 3, num2, num2.length);
-    merge3(num1, 3, num2, num2.length);
-    System.out.println(Arrays.toString(num1));
-  }
-
   /**
    * 从num1后面开始覆盖，把最大的放在后面依次向前
    *
