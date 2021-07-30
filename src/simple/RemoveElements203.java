@@ -32,7 +32,7 @@ public class RemoveElements203 {
    * @return
    */
   public ListNode removeElements1(ListNode head, int val) {
-    // 由于链表的头节点有可能被删除，所以创建哑节点。使其等于头节点
+    // 由于链表的头节点有可能被删除，所以创建哑节点。使其变成头节点
     ListNode dummyHead = new ListNode(0);
     dummyHead.next = head;
     ListNode temp = dummyHead;
