@@ -42,12 +42,12 @@ public class MyStack225 {
 
   /** Removes the element on top of the stack and returns that element. */
   public int pop() {
-    return q1.isEmpty() ? null : q1.remove();
+    return q1.remove();
   }
 
   /** Get the top element. */
   public int top() {
-    return q1.isEmpty() ? null : q1.peek();
+    return q1.peek();
   }
 
   /** Returns whether the stack is empty. */
