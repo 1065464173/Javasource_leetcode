@@ -38,6 +38,7 @@ public class AddTwoNumbers2 {
       c1 = i / 10;
       node = node.next;
     }
+    //最后的进位不能忘
     if (c1 > 0) {
       node.next = new ListNode(c1);
     }
