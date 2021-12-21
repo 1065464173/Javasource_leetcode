@@ -1,6 +1,5 @@
 package cxymsjd6.medium;
 
-import liquibase.pro.packaged.M;
 
 /**
  * @author Sxuet
