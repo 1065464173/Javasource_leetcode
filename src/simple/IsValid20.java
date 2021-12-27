@@ -24,7 +24,9 @@ public class IsValid20 {
     if (s.length() % 2 == 1) {
       return false;
     }
-    if (s.length() > 0 && !map.containsKey(s.charAt(0))) return false;
+    if (s.length() > 0 && !map.containsKey(s.charAt(0))) {
+        return false;
+    }
     LinkedList<Character> stack =
         new LinkedList<Character>() {
           {
@@ -32,8 +34,11 @@ public class IsValid20 {
           }
         };
     for (Character c : s.toCharArray()) {
-      if (map.containsKey(c)) stack.addLast(c);
-      else if (map.get(stack.removeLast()) != c) return false;
+      if (map.containsKey(c)) {
+          stack.addLast(c);
+      } else if (!map.get(stack.removeLast()).equals(c)) {
+          return false;
+      }
     }
 
     return stack.size() == 1;

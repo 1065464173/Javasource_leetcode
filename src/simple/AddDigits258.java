@@ -33,8 +33,12 @@ public class AddDigits258 {
 
     // 数学公式推导  v= x*100+y*10+z*1 = x*99+y*9+x+y+z;
     // 处理0 和 9的问题
-    if (num == 0) return 0;
-    if (num % 9 == 0) return 9;
+    if (num == 0) {
+        return 0;
+    }
+    if (num % 9 == 0) {
+        return 9;
+    }
     return num % 9;
   }
 

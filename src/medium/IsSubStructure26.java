@@ -28,8 +28,12 @@ public class IsSubStructure26 {
    * 3.当节点A和B的值不同：说明匹配失败，返回false;
    */
   boolean recur(TreeNode A, TreeNode B) {
-    if (B == null) return true;
-    if (A == null || A.val != B.val) return false;
+    if (B == null) {
+        return true;
+    }
+    if (A == null || A.val != B.val) {
+        return false;
+    }
     return recur(A.left, B.left) && recur(A.right, B.right);
   }
 }

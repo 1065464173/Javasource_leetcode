@@ -1,7 +1,5 @@
 package medium;
 
-import liquibase.pro.packaged.L;
-
 /**
  * @author Sxuet
  * @program daydayup
@@ -40,7 +38,9 @@ public class ConstructArr66 {
    */
   public int[] constructArr2(int[] a) {
     int len = a.length;
-    if (len == 0) return new int[0];
+    if (len == 0) {
+      return new int[0];
+    }
     int[] b = new int[len];
     b[0] = 1;
     int tmp = 1;

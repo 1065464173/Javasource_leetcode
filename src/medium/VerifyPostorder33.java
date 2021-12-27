@@ -20,11 +20,17 @@ public class VerifyPostorder33 {
   }
 
   private boolean recur(int[] postorder, int i, int j) {
-    if (i >= j) return true;
+    if (i >= j) {
+        return true;
+    }
     int p = i;
-    while (postorder[p] < postorder[j]) p++;
+    while (postorder[p] < postorder[j]) {
+        p++;
+    }
     int m = p;
-    while (postorder[p] > postorder[j]) p++;
+    while (postorder[p] > postorder[j]) {
+        p++;
+    }
     return p == j && recur(postorder, i, m - 1) && recur(postorder, m, j - 1);
   }
 

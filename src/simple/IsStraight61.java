@@ -23,13 +23,17 @@ public class IsStraight61 {
     int max = 0, min = 14;
     for (int num : nums) {
       // 跳过大小王
-      if (num == 0) continue;
+      if (num == 0) {
+          continue;
+      }
       // 最大牌
       max = Math.max(max, num);
       // 最小牌
       min = Math.min(min, num);
       // 若有重复，提前返回 false
-      if (repeat.contains(num)) return false;
+      if (repeat.contains(num)) {
+          return false;
+      }
       // 添加此牌至 Set
       repeat.add(num);
     }
@@ -49,9 +53,13 @@ public class IsStraight61 {
     Arrays.sort(nums);
     for (int i = 0; i < 4; i++) {
       // 统计大小王数量
-      if (nums[i] == 0) joker++;
+      if (nums[i] == 0) {
+          joker++;
+      }
       // 若有重复，提前返回 false
-      else if (nums[i] == nums[i + 1]) return false;
+      else if (nums[i] == nums[i + 1]) {
+          return false;
+      }
     }
     // 最大牌 - 最小牌 < 5 则可构成顺子
     return nums[4] - nums[joker] < 5;

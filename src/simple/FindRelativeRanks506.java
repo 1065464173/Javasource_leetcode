@@ -17,10 +17,15 @@ public class FindRelativeRanks506 {
     Arrays.sort(clone);
     for (int i = 0; i < score.length; i++) {
       int rank = n - Arrays.binarySearch(clone, score[i]); // n - 排序后的下标 == 名次
-      if (rank == 1) ans[i] = "Gold Medal";
-      else if (rank == 2) ans[i] = "Silver Medal";
-      else if (rank == 3) ans[i] = "Bronze Medal";
-      else ans[i] = Integer.toString(rank);
+      if (rank == 1) {
+          ans[i] = "Gold Medal";
+      } else if (rank == 2) {
+          ans[i] = "Silver Medal";
+      } else if (rank == 3) {
+          ans[i] = "Bronze Medal";
+      } else {
+          ans[i] = Integer.toString(rank);
+      }
     }
     return ans;
   }

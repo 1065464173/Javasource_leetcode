@@ -21,11 +21,15 @@ public class ReverseWords58 {
     StringBuilder res = new StringBuilder();
     while (i >= 0) {
       // 搜索首个空格
-      while (i >= 0 && s.charAt(i) != ' ') i--;
+      while (i >= 0 && s.charAt(i) != ' ') {
+          i--;
+      }
       // 添加单词
       res.append(s.substring(i + 1, j + 1) + " ");
       // 跳过单词间空格
-      while (i >= 0 && s.charAt(i) == ' ') i--;
+      while (i >= 0 && s.charAt(i) == ' ') {
+          i--;
+      }
       // j 指向下个单词的尾字符
       j = i;
     }
@@ -44,7 +48,9 @@ public class ReverseWords58 {
     String[] split = s.trim().split(" ");
     StringBuilder ans = new StringBuilder();
     for (int i = split.length - 1; i >= 0; i--) {
-      if (split[i].equals("")) continue;
+      if (split[i].equals("")) {
+          continue;
+      }
       ans.append(split[i]).append(" ");
     }
     return ans.toString().trim();

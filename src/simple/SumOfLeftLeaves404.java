@@ -84,7 +84,9 @@ public class SumOfLeftLeaves404 {
    * @return
    */
   public int sumOfLeftLeaves(TreeNode root) {
-    if (root == null) return 0;
+    if (root == null) {
+        return 0;
+    }
     return sumOfLeftLeaves(root.left)
         + sumOfLeftLeaves(root.right)
         + (root.left != null && root.left.left == null && root.left.right == null

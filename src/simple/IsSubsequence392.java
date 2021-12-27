@@ -92,8 +92,11 @@ public class IsSubsequence392 {
     // 从后往前递推初始化f数组
     for (int i = m - 1; i >= 0; i--) {
       for (int j = 0; j < 26; j++) {
-        if (t.charAt(i) == j + 'a') f[i][j] = i;
-        else f[i][j] = f[i + 1][j];
+        if (t.charAt(i) == j + 'a') {
+            f[i][j] = i;
+        } else {
+            f[i][j] = f[i + 1][j];
+        }
       }
     }
     int add = 0;

@@ -19,7 +19,9 @@ public class FindTilt563 {
   }
 
   public int traverse(TreeNode root) {
-    if (root == null) return 0;
+    if (root == null) {
+        return 0;
+    }
     int left = traverse(root.left);
     int right = traverse(root.right);
     tilt += Math.abs(left - right);

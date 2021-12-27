@@ -97,8 +97,11 @@ public class CanPermutePalindrome266 {
     int count = 0;
     for (int i = 0; i < s.length(); i++) {
       map[s.charAt(i)]++;
-      if (map[s.charAt(i)] % 2 == 0) count--;
-      else count++;
+      if (map[s.charAt(i)] % 2 == 0) {
+          count--;
+      } else {
+          count++;
+      }
     }
     return count <= 1;
   }
@@ -114,7 +117,9 @@ public class CanPermutePalindrome266 {
   public boolean canPermutePalindrome5(String s) {
     Set<Character> set = new HashSet<>();
     for (int i = 0; i < s.length(); i++) {
-      if (!set.add(s.charAt(i))) set.remove(s.charAt(i));
+      if (!set.add(s.charAt(i))) {
+          set.remove(s.charAt(i));
+      }
     }
     return set.size() <= 1;
   }

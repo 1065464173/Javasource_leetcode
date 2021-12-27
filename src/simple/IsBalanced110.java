@@ -70,11 +70,17 @@ public class IsBalanced110 {
     } else {
       return Math.max(leftHeight, rightHeight) + 1;
     }*/
-    if (root == null) return 0;
+    if (root == null) {
+        return 0;
+    }
     int left = height2(root.left);
-    if (left == -1) return -1;
+    if (left == -1) {
+        return -1;
+    }
     int right = height2(root.right);
-    if (right == -1) return -1;
+    if (right == -1) {
+        return -1;
+    }
     return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
   }
 }

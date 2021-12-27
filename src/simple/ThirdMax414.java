@@ -20,7 +20,9 @@ public class ThirdMax414 {
     // 第一大，第二大，第三大
     long p1 = Long.MIN_VALUE, p2 = Integer.MIN_VALUE, p3 = Integer.MIN_VALUE;
     for (int num : nums) {
-      if (num == p1 || num == p2 || num == p3) continue;
+      if (num == p1 || num == p2 || num == p3) {
+          continue;
+      }
       if (num > p1) {
         p3 = p2;
         p2 = p1;

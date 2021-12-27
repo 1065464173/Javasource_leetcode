@@ -17,10 +17,16 @@ public class CuttingRope14 {
    * @return
    */
   public int cuttingRope1(int n) {
-    if (n <= 3) return n - 1;
+    if (n <= 3) {
+        return n - 1;
+    }
     int a = n / 3, b = n % 3;
-    if (b == 0) return (int) Math.pow(3, a);
-    if (b == 1) return (int) Math.pow(3, a - 1) * 4;
+    if (b == 0) {
+        return (int) Math.pow(3, a);
+    }
+    if (b == 1) {
+        return (int) Math.pow(3, a - 1) * 4;
+    }
     return (int) Math.pow(3, a) * 2;
   }
 
@@ -31,9 +37,15 @@ public class CuttingRope14 {
    * @return
    */
   public int cuttingRope2(int n) {
-    if (n == 2) return 1;
-    if (n == 3) return 2;
-    if (n == 4) return 4;
+    if (n == 2) {
+        return 1;
+    }
+    if (n == 3) {
+        return 2;
+    }
+    if (n == 4) {
+        return 4;
+    }
     int res = 1;
     while (n > 4) {
       res *= 3;
